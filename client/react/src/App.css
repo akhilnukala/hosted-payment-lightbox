@@ -1,0 +1,84 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+  padding: 40px;
+}
+
+.checkout {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.span-checkout {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.payment-form {
+  max-width: 400px;
+  margin: auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.group {
+  margin-bottom: 15px;
+  flex: 10;
+}
+
+.field-height {
+  height: 40px;
+}
+
+section {
+  text-align: center;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  max-width: 1001px;
+  margin: 80px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(0, 48, 249);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+h2 {
+  color: #0d51aa;
+  margin-bottom: 20px;
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+img {
+  width: 20%;
+  display: block;
+  margin: auto;
+}
