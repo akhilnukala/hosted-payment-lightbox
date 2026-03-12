@@ -6,7 +6,37 @@ The user clicks **Buy Now**, the server creates an order and payment session via
 
 ---
 
-## Quick Start
+## Quick Start - Using a VSCode Dev Container
+
+### Prerequisites
+
+| Requirement | Details |
+|---|---|
+| **Docker** | [Install Docker](https://docs.docker.com/get-docker/) |
+| **Dev Containers Extension** | Install [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension in VSCode |
+| **Elavon credentials** | `MERCHANT_ALIAS` and `SECRET_KEY` from the [Elavon Developer Dashboard](https://developer.elavon.com/dashboard) |
+
+
+#### Configure credentials
+
+Copy and edit the `.env` file before opening the container:
+  ```bash
+  cp server/node/.env.example server/node/.env
+  # fill in MERCHANT_ALIAS and SECRET_KEY
+  ```
+
+#### Open the container
+
+1. Run **Dev Containers: Reopen in Container** from the Command Palette.
+2. The container will install dependencies and start both servers automatically.
+
+Port `3000` (frontend) will open in your browser; port `4000` (backend) is forwarded in the background.
+
+If the `.env` file is missing or incomplete the container will print a message asking you to configure it.
+
+---
+
+## Quick Start - Manual Setup
 
 ### Prerequisites
 
@@ -48,29 +78,6 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
-
----
-
-## Using a Dev Container
-
-> Requires Docker and the **Dev Containers** VS Code extension.
-
-#### Configure credentials
-
-Copy and edit the `.env` file before opening the container:
-  ```bash
-  cp server/node/.env.example server/node/.env
-  # fill in MERCHANT_ALIAS and SECRET_KEY
-  ```
-
-#### Open the container
-
-1. Run **Dev Containers: Reopen in Container** from the Command Palette.
-2. The container will install dependencies and start both servers automatically.
-
-Port `3000` (frontend) will open in your browser; port `4000` (backend) is forwarded in the background.
-
-If the `.env` file is missing or incomplete the container will print a message asking you to configure it.
 
 ---
 
