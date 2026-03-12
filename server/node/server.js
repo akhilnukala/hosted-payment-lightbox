@@ -2,6 +2,7 @@ const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const app = express();
+const https = require('https');
 require("dotenv").config();
 app.use(cors());
 
@@ -9,9 +10,14 @@ const CLIENT_PORT = 3000;
 const SERVER_PORT = 4000;
 const BASE_URL = `https://uat.api.converge.eu.elavonaws.com`;
 
+const httpsAgent = new https.Agent({  
+  rejectUnauthorized: false
+});
+
 const axiosClient = axios.create({
   baseURL: BASE_URL,
   proxy: false,
+  httpsAgent,
 });
 
 // Step 1. Enter credentials

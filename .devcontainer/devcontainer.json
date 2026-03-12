@@ -1,0 +1,32 @@
+{
+  "name": "Hosted Payment Lighbox",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:latest",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  // "initializeCommand": "chmod +x .devcontainer/welcome-message.sh && bash .devcontainer/welcome-message.sh",
+  // "onCreateCommand": "chmod +x .devcontainer/welcome-message.sh && bash .devcontainer/welcome-message.sh",
+  "postCreateCommand": "chmod +x .devcontainer/welcome-message.sh && bash .devcontainer/welcome-message.sh",
+  "postAttachCommand": "chmod +x .devcontainer/welcome-message.sh && bash .devcontainer/welcome-message.sh",
+  "forwardPorts": [3000, 4000],
+  "portsAttributes": {
+    "3000": { "label": "Vite Client", "onAutoForward": "openBrowser" },
+    "4000": { "label": "Express Server", "onAutoForward": "notify" }
+  },
+  "secrets": {
+    "MERCHANT_ALIAS": {
+      "description": "Merchant alias of an existing EPG project.",
+      "documentationUrl": "https://developer.elavon.com/dashboard"
+    },
+    "SECRET_KEY": {
+      "description": "Secret key of an existing EPG project.",
+      "documentationUrl": "https://developer.elavon.com/dashboard"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"],
+      "settings": {
+        "editor.formatOnSave": true
+      }
+    }
+  }
+}
